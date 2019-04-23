@@ -1,0 +1,77 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #A3BCF9;
+}
+
+input {
+    background-color: #FFF8F0!important;
+}
+
+table {
+    margin-top: 4%;
+}
+
+#template-input, #template-output {
+    width: 50%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+#gen-button {
+    width: 10%;
+    font-size: 1.15rem;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.button {
+    background-color: #FFCF99!important;
+}
+
+.input-wrapper, .generation-wrapper {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    font-size: 1.3rem;
+    margin: 1%;
+}
+
+.options-wrapper, .normal-options-wrapper, .custom-options-wrapper {
+    width: 100%!important;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-options-wrapper {
+    height: 50%;
+    text-align: center;
+}
+
+.custom-options-wrapper > .ui.checkbox {
+    width: 10%;
+    margin-bottom: 1%;
+}
+
+.selection.multiple, #select-custom {
+    width: 80%!important;
+    background-color: #FFF8F0!important;
+    margin-top: 0.5%;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}

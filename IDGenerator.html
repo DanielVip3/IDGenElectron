@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<!-- Start of the HTML document, declaring it as english -->
+
+<html lang="en">
+
+    <head> <!-- HEAD -->
+
+        <!-- Other specifics -->
+        <title>ID Generator</title>
+        <meta name="title" content="ID Generator">
+        <meta name="copyright" content="Copyright DanielVip3 2018 under MIT License">
+        <meta name="reply-to" content="danieledemartino.72004@gmail.com">
+
+        <!-- Recommended Meta tags -->
+        <meta http-equiv="content-type" content="text/html">
+        <link rel="shortcut icon" href="favicon.ico" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="language" content="english">
+
+        <meta name="author" content=”DanielVip3”>
+        <meta name="designer" content=”DanielVip3”>
+        <meta name="publisher" content=”DanielVip3”>
+        <meta name="web_author" content="DanielVip3">
+        <meta name="abstract" content="DanielVip3 is a full-stack web developer with 2 years of experience in various languages, mainly JavaScript, PHP and Python. Also, knows HTML, CSS, XML and similars.">
+        <meta name="classification" content="DanielVip3 is a full-stack web developer with 2 years of experience in various languages, mainly JavaScript, PHP and Python. Also, knows HTML, CSS, XML and similars.">
+
+        <!-- Search Engine tags(even if we won't have any search engine) -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="noodp">
+        <meta name="description" content="A simple and customizable ID generator that fits any esigence.">
+        <meta name="subject" content="Randomic ID Generation">
+        <meta name="keywords" content="ID, Generator, Generate, IDGenerator, Gen">
+        <meta name="distribution" content="global">
+        <meta name="rating" content="safe for kids">
+
+        <meta name="revisit-after" content="7 days">
+        <meta http-equiv="refresh" content="300">
+
+        <!-- Social tags -->
+        <meta property="og:title" content="ID Generator">
+        <meta property="og:description" content="A simple and customizable ID generator that fits any esigence.">
+
+        <meta name="twitter:title" content="ID Generator">
+        <meta name="twitter:description" content="A simple and customizable ID generator that fits any esigence.">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+
+        <!-- Semantic UI -->
+        <link rel="stylesheet" href="semantic/dist/semantic.min.css" type="text/css">
+        <script src="semantic/dist/semantic.min.js" type="text/javascript"></script>
+
+        <!-- Custom stylesheets -->
+        <link rel="stylesheet" href="css/IDGenerator.css" type="text/css">
+    </head>
+
+    <body> <!-- BODY -->
+
+        <!-- Documentation text -->
+
+        <span>ID templates makes use of the <b>*</b>(asterisk) to mark a character as "to-be-generated".</span>
+
+
+        <!-- Input for the ID generation template -->
+
+        <div class="input-wrapper">
+            <div class="ui input" id="template-input">
+              <input type="text" placeholder="Insert ID template...">
+            </div>
+        </div>
+
+
+        <!-- Generation options -->
+
+        <div class="ui container options-wrapper">
+
+            <!-- Premade Options -->
+
+            <div class="ui container normal-options-wrapper">
+
+                <!-- Premade Options checkbox -->
+
+                <div class="ui checkbox">
+                  <input type="checkbox" name="premade_charset" class="pre_char">
+                  <label>Use <b>pre-made characters list</b></label>
+                </div>
+
+                <div>
+
+                    <!-- Table that includes every premade-type checkbox -->
+
+                    <table cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox numbers">
+                                        <input type="checkbox" name="numbers">
+                                        <label>Include <b>any number</b></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ui checkbox letters">
+                                      <input type="checkbox" name="letters">
+                                      <label>Include any <b>alphabetic character</b></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox pos_numbers">
+                                      <input type="checkbox" name="pos_numbers">
+                                      <label>Include <b>positive numbers</b></label>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="ui checkbox low_letters">
+                                      <input type="checkbox" name="low_letters">
+                                      <label>Include <b>lower alphabetic characters</b></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox neg_numbers">
+                                      <input type="checkbox" name="neg_numbers">
+                                      <label>Include <b>negative numbers</b></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ui checkbox high_letters">
+                                      <input type="checkbox" name="high_letters">
+                                      <label>Include <b>upper alphabetic characters</b></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox zero">
+                                      <input type="checkbox" name="zero">
+                                      <label>Include <b>zeros</b></label>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="ui checkbox spec_letters">
+                                      <input type="checkbox" name="spec_letters">
+                                      <label>Include <b>special characters</b></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox spaces">
+                                      <input type="checkbox" name="spaces">
+                                      <label>Include <b>spaces</b></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+            <!-- Options Divider -->
+
+            <div class="ui horizontal divider">
+              OR
+            </div>
+
+
+            <!-- Custom Options -->
+
+            <div class="ui container custom-options-wrapper">
+
+                <!-- Custom Options checkbox -->
+
+                <div class="ui checkbox">
+                  <input type="checkbox" name="custom_charset" class="cus_char">
+                  <label>Use <b>custom characters list</b></label>
+                </div>
+
+                <span> Divide characters with <b>,</b>(commas) </span>
+
+                <!-- Input that accepts any character for Custom Options -->
+
+                <div class="ui search fluid dropdown selection multiple">
+                    <select name="characters" multiple="" id="select-custom"></select>
+                    <input class="search" autocomplete="off" tabindex="0">
+                    <span class="sizer"></span>
+                    <div class="text"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Button to generate the ID -->
+
+        <div class="generation-wrapper">
+            <button class="ui labeled icon button" id="gen-button">
+              <i class="microchip icon"></i>
+              Generate!
+            </button>
+        </div>
+
+
+        <!-- Output of the ID generation -->
+
+        <div class="input-wrapper">
+            <div class="ui action input" id="template-output">
+              <input type="text" placeholder="Output ID..." readonly>
+              <button class="ui right icon button" id="copy-button">
+                <i class="copy icon"></i>&nbsp;
+                Copy
+              </button>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+
+        <div class="footer">
+            GUI and API made by DanielVip3 with <i class="heart icon"></i>
+        </div>
+
+
+        <!-- Custom scripts -->
+
+            <!-- Imports the main API -->
+        <script src="js/API.IDGenerator.js" type="text/javascript"></script>
+
+            <!-- Imports this software's worker script -->
+        <script src="js/IDGenerator.js" type="text/javascript"></script>
+
+    </body>
+
+    <!-- End of the HTML document -->
+
+</html>

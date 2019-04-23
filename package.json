@@ -1,0 +1,20 @@
+{
+  "name": "idgenerator-gui",
+  "version": "1.0.0",
+  "description": "The GUI version of my ID Generator.",
+  "main": "main_electron.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "id",
+    "generator",
+    "gui"
+  ],
+  "author": "DanielVip3",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "semantic-ui": "^2.4.2"
+  }
+}
